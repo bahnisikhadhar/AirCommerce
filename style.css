@@ -14,17 +14,17 @@
 .first_head {
     border-top: 2px solid var(--bg-color1);
     border-bottom: 2px solid var(--bg-color1) ;
-
+    /* max-width: 100%; */
 }
 .first_header {
-    max-width: 85%;
+    max-width: 1440px;
     margin: auto;
     padding: .7rem;
     color: rgb(156, 154, 154);
     font-size: 12px;
     font-weight: 600;
 }
-.first_header ul {
+.first_header  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,6 +49,10 @@
 .first_header .right_icon {
     display: flex;
     gap: 1rem;
+   
+}
+.right_icon select {
+    border: none;
 }
 
 /* start of 2nd header */
@@ -56,7 +60,7 @@
     border-bottom: 2px solid var(--bg-color1);
 }
 .second_header {
-    max-width: 85%;
+    max-width: 1440px;
     margin: auto;
     padding: 1rem;
     color: rgb(156, 154, 154);
@@ -101,7 +105,7 @@
 }
 /* Start of main body */
 main {
-    max-width: 85%;
+    max-width: 1440px;
     margin: auto;
 }
 /* start of navbar */
@@ -121,8 +125,8 @@ main {
 }
 /* start of banner1 */
 .banner1 {
-    background: url(/images/banner-1.jpg) no-repeat center/cover;
-    width: 100%;
+    background: url("/images/banner-1.jpg") no-repeat center/cover;
+    /* max-width: 100%; */
     height:25rem ;
 }
  .text {
@@ -148,18 +152,22 @@ main {
 /* start of 1st row */
 .movable {
     display: flex;
-    gap: .5rem;
+    justify-content: space-between;
+    /* gap: .5rem; */
     margin:60px auto;
-    overflow-x: hidden;
 }
 .firstrow {
     display: flex;
-    /* align-items: center; */
-    gap: 2rem;
-    width: 25%;
+    justify-content: space-between;
+    min-width: 24%;
     border: 1px solid var(--bg-color1);
     padding:5px;
     border-radius: 15px;
+    overflow-x: hidden;
+}
+.item_with_text {
+    display: flex;
+    gap: 1rem;
 }
 .firstrow .item {
     background-color:var(--bg-color1) ;
@@ -232,21 +240,16 @@ aside {
     color: goldenrod;
 }
 .right_row1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* flex-wrap: wrap;
-    justify-content: space-between; */
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:2rem;
+    justify-content: space-between;
+}
+.right_row1 h1 {
     padding-left:2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--bg-color1);
-}
-.right_row2 {
-    display: flex;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    padding-left:2rem;
-    gap: 3rem;
+    margin-bottom: 1rem;
 }
 .arrival, .trending, .rated {
     max-width: 30%;
@@ -272,7 +275,7 @@ aside {
     height: 100%;
     width: 30%;
 }
-.deal_of_day {
+.deal_of_day, .new_products {
     padding-left:2rem;
 }
 .deal_of_day .row1,.new_products .row1 {
@@ -305,8 +308,16 @@ aside {
     margin-top: 1rem;
 }
 .bar {
-    height: 5px;
+    height: .5rem;
     border-radius: 25px;
+    background-color: #ccc;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.bar1 {
+    height: .4rem;
+    border-radius: 25px;
+    max-width: 40%;
     background-color: var(--bg-color);
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -341,8 +352,9 @@ aside {
 }
 .second_last_row {
     display: flex;
-    /* justify-content: space-between; */
-    gap: 2.5rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* gap: 2.5rem; */
     margin-top: 5rem;
 }
 .testimonial h1, .services h1 {
@@ -352,7 +364,7 @@ aside {
 .alan_doe, .support {
     margin-top: 2rem;
     border: 1px solid var(--bg-color1);
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 4rem;
     text-align: center;
     border-radius: 10px;
 }
@@ -361,9 +373,39 @@ aside {
     width: 50%;
     border-radius: 50%;
 }
-.second_last_row .image img {
+.banner_services {
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.second_last_row .banner2 img {
     /* background: url("/images/cta-banner.jpg") no-repeat center/cover; */
     border-radius: 10px;
+}
+.banner2 {
+    position: relative;
+}
+.summer_collection{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ padding: 2rem 4rem;
+ border-radius: 10px;
+ background: rgba(255, 255, 255,.5);
+ box-shadow: 0 5px 15px rgba(0,0,0, .5);
+}
+.summer_collection h5 {
+    background-color: rgb(43, 42, 42);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+.summer_collection h2, .summer_collection p {
+    text-align: center;
+    padding-top: 5px;
 }
 .support_medium {
     display: flex;
@@ -375,9 +417,14 @@ aside {
 }
 .last_row {
     display: flex;
-    gap: .5rem;
+    flex-wrap: wrap;
+    /* gap: .5rem; */
+    justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+.last_row_item {
+    overflow-x: hidden;
 }
 .last_row img {
     max-height:11rem;
@@ -393,4 +440,65 @@ aside {
 .last_row span {
     color: gray;
     font-weight: 200;
+}
+footer {
+    /* margin-top: 80px; */
+    /* height: 50vh; */
+    /* width: 100%; */
+    background-color:rgb(35, 34, 34);
+}
+.upper_footer, .middle_footer {
+    border-bottom: 1px solid rgb(166, 148, 148);
+}
+.footer_content {
+    max-width: 1440px;
+    margin: auto;
+}
+.upper_footer_text {
+    padding:3rem 0rem 2rem 0rem;
+}
+.upper_footer_text h3 {
+    color: var(--bg-color);
+    padding-bottom: 1rem;
+}
+.upper_footer_text p {
+    padding-bottom: 1rem;
+    color: white;
+}
+.upper_footer_text span {
+    font-weight: 100;
+    padding-left: 10px;
+    color: rgb(206, 203, 203);
+}
+.middle_footer .footer_content {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: left;
+    font-size: 15px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+.middle_footer .footer_content li:first-child {
+    font-size: 17px;
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-color: var(--bg-color);
+    text-underline-offset: 12px;
+    padding-bottom: 1.5rem;
+}
+.middle_footer .footer_content a {
+    color: gray;
+}
+.middle_footer .footer_content li {
+    padding-bottom: .5rem;
+}
+.lower_footer {
+    text-align: center;
+    padding: 2rem;
+    border-bottom:1px solid rgb(166, 148, 148) ;
+}
+.lower_footer p {
+    color: rgb(206, 203, 203);
+    padding-top: .5rem;
 }
