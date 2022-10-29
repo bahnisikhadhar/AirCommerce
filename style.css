@@ -18,8 +18,8 @@
 }
 .first_header {
     max-width: 1440px;
-    margin: auto;
-    padding: .7rem;
+    /* margin: auto; */
+    padding: .7rem 5rem;
     color: rgb(156, 154, 154);
     font-size: 12px;
     font-weight: 600;
@@ -61,8 +61,8 @@
 }
 .second_header {
     max-width: 1440px;
-    margin: auto;
-    padding: 1rem;
+    /* margin: auto; */
+    padding: 1rem 5rem;
     color: rgb(156, 154, 154);
 }
 .second_header ul {
@@ -106,7 +106,9 @@
 /* Start of main body */
 main {
     max-width: 1440px;
-    margin: auto;
+    /* margin: auto; */
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 /* start of navbar */
 .navbar{
@@ -126,7 +128,7 @@ main {
 /* start of banner1 */
 .banner1 {
     background: url("/images/banner-1.jpg") no-repeat center/cover;
-    /* max-width: 100%; */
+    /* min-width: 820px; */
     height:25rem ;
 }
  .text {
@@ -154,7 +156,8 @@ main {
     display: flex;
     justify-content: space-between;
     /* gap: .5rem; */
-    margin:60px auto;
+    margin-top:2rem;
+    margin-bottom:3rem;
 }
 .firstrow {
     display: flex;
@@ -164,6 +167,9 @@ main {
     padding:5px;
     border-radius: 15px;
     overflow-x: hidden;
+}
+.firstrow:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .item_with_text {
     display: flex;
@@ -207,8 +213,10 @@ aside {
     border: 1px solid var(--bg-color1);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 0px 10px var(--bg-color1) ;
     margin-bottom: 1rem;
+}
+.left_sidebar:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .left_sidebar h1 {
     font-size: 1rem;
@@ -264,6 +272,9 @@ aside {
     gap: 1rem;
     padding: .5rem 0;
 }
+.arrival_row:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
+}
 .arrival_row span, .shampoo_text span, .newitem_row1 span {
     text-decoration: line-through;
 }
@@ -294,6 +305,9 @@ aside {
     border-radius: 10px;
     padding-right: 2rem;
     margin-top: 2rem;
+}
+.shampoo:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .shampoo img {
     max-height: 47vh;
@@ -337,7 +351,7 @@ aside {
 .newitem_row {
     display: flex;
     flex-wrap: wrap;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
 }
 .newitem_row1 {
@@ -346,6 +360,10 @@ aside {
     border-radius: 10px;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+   
+}
+.newitem_row1:hover {
+    box-shadow: 0 0 20px var(--bg-color1);
 }
 .newitem_row img {
     max-height: 20vh;
@@ -364,19 +382,25 @@ aside {
 .alan_doe, .support {
     margin-top: 2rem;
     border: 1px solid var(--bg-color1);
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 3rem;
     text-align: center;
     border-radius: 10px;
+}
+.alan_doe:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .alan_doe img {
     height: 50%;
     width: 50%;
     border-radius: 50%;
 }
+.fa-quote-left {
+    color: var(--bg-color);
+}
 .banner_services {
     display: flex;
-    /* justify-content: space-evenly; */
-    gap: 3rem;
+    /* justify-content: space-between; */
+    gap: 2rem;
     flex-wrap: wrap;
 }
 .second_last_row .banner2 img {
@@ -407,12 +431,16 @@ aside {
     text-align: center;
     padding-top: 5px;
 }
-.support_medium {
-    display: flex;
-    gap: 1rem;
-    padding: .2rem;
+.support p {
+    padding-bottom: .4rem;
 }
-.support_medium .fa-solid,.support_medium .bi {
+.support i {
+    padding-right: .5rem;
+}
+.support:hover {
+    box-shadow: 0px 0px 20px var(--bg-color1) ;
+}
+.support .fa-solid,.support .bi {
     color: var(--bg-color);
 }
 .last_row {
@@ -430,6 +458,9 @@ aside {
     max-height:11rem;
     border-radius: 10px;
 }
+.last_row img:hover {
+    box-shadow: 0px 0px 10px var(--bg-color);
+}
 .last_row h1 {
     font-size: 1rem;
 }
@@ -444,7 +475,7 @@ aside {
 footer {
     /* margin-top: 80px; */
     /* height: 50vh; */
-    /* width: 100%; */
+    /* max-width: 100%; */
     background-color:rgb(35, 34, 34);
 }
 .upper_footer, .middle_footer {
@@ -452,7 +483,9 @@ footer {
 }
 .footer_content {
     max-width: 1440px;
-    margin: auto;
+    /* margin: auto; */
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .upper_footer_text {
     padding:3rem 0rem 2rem 0rem;
@@ -501,4 +534,66 @@ footer {
 .lower_footer p {
     color: rgb(206, 203, 203);
     padding-top: .5rem;
+}
+
+
+/* media query */
+
+@media only screen and (max-width: 830px) {
+    main {
+        padding-left: 3rem;
+        padding-right: 0;
+    }
+    .deal_of_day, .new_products, .right_row1, .right_row1 h1 {
+        padding-left: 0;
+    }
+    .newitem_row, .last_row {
+        justify-content: space-evenly;
+    }
+    .testimonial, .services {
+        width: 50rem;
+    }
+    .banner2 img {
+        width: 50rem;
+    }
+    .middle_footer .footer_content {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .alan_doe img {
+        height: 30%;
+        width: 30%;
+        border-radius: 50%;
+    }
+    /* .main_body {
+        grid-template-columns:0fr, 5fr;
+    } */
+    .left_sidebar,.first_header .icons, .second_header .second_icon {
+        display: none;
+    }
+    .second_icon1 {
+        display: flex;
+    }
+}
+.second_icon1 {
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 13rem;
+    z-index: 1000;
+    display: none;
+}
+.second_icon1 i {
+    padding-left: 5rem ;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.second_icon1 sup {
+    background-color: red;
+    color: white;
+    padding:0px 3px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 50%;
 }
