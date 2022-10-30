@@ -6,6 +6,9 @@
     list-style: none;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    width: 100%;
+}
 :root {
     --bg-color: rgb(244, 152, 167);
     --bg-color1: rgb(232, 232, 232)
@@ -127,9 +130,13 @@ main {
 }
 /* start of banner1 */
 .banner1 {
-    background: url("/images/banner-1.jpg") no-repeat center/cover;
+    background: url("/images/banner-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
     /* min-width: 820px; */
     height:25rem ;
+    max-width: 100%; 
 }
  .text {
    padding: 7rem;
@@ -155,7 +162,6 @@ main {
 .movable {
     display: flex;
     justify-content: space-between;
-    /* gap: .5rem; */
     margin-top:2rem;
     margin-bottom:3rem;
 }
@@ -186,7 +192,7 @@ main {
     width: 40px;
 }
 .numberof_item {
-    padding-left: 7rem;
+    /* padding-left: 7rem; */
     color: rgb(70, 69, 69);
     font-size: 10px;
 }
@@ -263,12 +269,12 @@ aside {
     max-width: 30%;
 }
 .arrival_row {
-    max-width:100%;
+    /* max-width:100%; */
     border: 1px solid var(--bg-color1);
     border-radius: 10px;
     margin-bottom: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 1rem;
     padding: .5rem 0;
 }
@@ -360,7 +366,6 @@ aside {
     border-radius: 10px;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-   
 }
 .newitem_row1:hover {
     box-shadow: 0 0 20px var(--bg-color1);
@@ -406,6 +411,9 @@ aside {
 .second_last_row .banner2 img {
     /* background: url("/images/cta-banner.jpg") no-repeat center/cover; */
     border-radius: 10px;
+}
+.banner2 img {
+    background-size: 100%;
 }
 .banner2 {
     position: relative;
@@ -473,9 +481,6 @@ aside {
     font-weight: 200;
 }
 footer {
-    /* margin-top: 80px; */
-    /* height: 50vh; */
-    /* max-width: 100%; */
     background-color:rgb(35, 34, 34);
 }
 .upper_footer, .middle_footer {
@@ -535,14 +540,31 @@ footer {
     color: rgb(206, 203, 203);
     padding-top: .5rem;
 }
+/* for tab */
+.second_icon1 {
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    /* width: 50%; */
+    z-index: 1000;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
 
+/* media query for tab */
 
-/* media query */
-
-@media only screen and (max-width: 830px) {
-    main {
-        padding-left: 3rem;
-        padding-right: 0;
+@media (min-width: 760px) and (max-width:1280px){
+    body {
+        width: 100%;
+    }
+    .banner1 {
+        margin-top: 2rem;
+    }
+    .text {
+        padding-top: 2rem;
+        padding-left: 4rem;
+        
     }
     .deal_of_day, .new_products, .right_row1, .right_row1 h1 {
         padding-left: 0;
@@ -550,12 +572,14 @@ footer {
     .newitem_row, .last_row {
         justify-content: space-evenly;
     }
-    .testimonial, .services {
-        width: 50rem;
+    .testimonial,.services, .banner2 {
+        width: 100%;
     }
     .banner2 img {
-        width: 50rem;
-    }
+        padding-top: 2rem;
+        width: 100%;
+        /* padding-left: 1.3rem; */
+    } 
     .middle_footer .footer_content {
         grid-template-columns: repeat(3,1fr);
     }
@@ -564,36 +588,122 @@ footer {
         width: 30%;
         border-radius: 50%;
     }
-    /* .main_body {
-        grid-template-columns:0fr, 5fr;
-    } */
-    .left_sidebar,.first_header .icons, .second_header .second_icon {
+    .main_body {
+        grid-template-columns:1fr;
+    }
+    .sidebar_hide,.first_header .icons, .second_header .second_icon, .navbar, .first_row_hide_tab {
         display: none;
+    }
+    .movable .tab
+    {
+        width: 45%;
     }
     .second_icon1 {
         display: flex;
+        width: 45%;
+        position: fixed;
+        bottom: 0;
+        left: 25%;
+    }
+    .banner1 {
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
-.second_icon1 {
-    background-color: white;
-    box-shadow: 0px 0px 10px gray;
-    width: 50%;
-    position: fixed;
-    bottom: 0;
-    left: 13rem;
-    z-index: 1000;
+
+/* for phone */
+
+.second_header_phone {
+    border-bottom: 2px solid var(--bg-color1);
+    padding: 1rem 5rem;
+    /* max-width: 1440px; */
     display: none;
 }
-.second_icon1 i {
-    padding-left: 5rem ;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+.second_header_phone .air_text {
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--bg-color);
 }
-.second_icon1 sup {
-    background-color: red;
-    color: white;
-    padding:0px 3px;
-    text-align: center;
-    font-size: 10px;
-    border-radius: 50%;
+.second_header_phone .search_bar {
+    margin-top: 1rem;
+    min-width: 60%;
+    padding-left: 10px;
+    border: 2px solid var(--bg-color1);
+    border-radius: 10px;
+}
+.second_header_phone .search_bar input{
+    color:rgb(231, 226, 226) ;
+    padding: 10px;
+    font-size: .8rem;
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+/* media query for phone */
+@media (min-width: 0px) and (max-width:760px){
+    body {
+        width: 100%;
+    }
+    .banner1 {
+        margin-top: 2rem;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .banner1 .text {
+        display: none;
+    }
+    .right_row1, .shampoo {
+        flex-direction: column;
+    }
+    .right_row1 .arrival_row {
+        width:35rem
+    }
+    .first_header .rigt_icon_hide_phone, .second_header .hide_phone{
+        display: none;
+    }
+    .sidebar_hide,.first_header .icons, .second_header .second_icon, .navbar, .first_row_hide_tab {
+        display: none;
+    }
+    .movable .hide_phone, .last_row .hide_phone {
+        display: none;
+    }
+    .movable .tab
+    {
+        width: 100%;
+    }
+    .deal_of_day, .new_products, .right_row1, .right_row1 h1 {
+        padding-left: 0;
+    }
+    .newitem_row, .last_row {
+        justify-content: space-evenly;
+    }
+    .testimonial,.services, .banner2 {
+        width: 100%;
+    }
+    .banner2 img {
+        padding-top: 5rem;
+        width: 100%;
+        /* padding-left: 1.3rem; */
+    } 
+    .main_body {
+        grid-template-columns:1fr;
+    }
+    .middle_footer .footer_content {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .second_icon1 {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        /* left: 25%; */
+    }
+    .second_head {
+        display: none;
+    }
+    .second_header_phone {
+        display: flex;
+        flex-direction: column;
+    }
 }
