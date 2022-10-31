@@ -316,7 +316,7 @@ aside {
     box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .shampoo img {
-    max-height: 47vh;
+    max-height: 28rem;
     padding-top: 2rem;
 }
 .shampoo_text {
@@ -371,7 +371,8 @@ aside {
     box-shadow: 0 0 20px var(--bg-color1);
 }
 .newitem_row img {
-    max-height: 20vh;
+    max-height: 9rem;
+    /* max-height: 25vh; */
 }
 .second_last_row {
     display: flex;
@@ -554,7 +555,7 @@ footer {
 
 /* media query for tab */
 
-@media (min-width: 760px) and (max-width:1280px){
+@media (min-width: 870px) and (max-width:1280px){
     body {
         width: 100%;
     }
@@ -641,7 +642,7 @@ footer {
 }
 
 /* media query for phone */
-@media (min-width: 0px) and (max-width:760px){
+@media (min-width: 0px) and (max-width:870px){
     body {
         width: 100%;
     }
