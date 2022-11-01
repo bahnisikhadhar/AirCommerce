@@ -138,15 +138,16 @@ body {
 .banner1 {
     background: url("/images/banner-1.jpg");
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    /* min-width: 820px; */
-    height:25rem ;
-    max-width: 100%; 
+    /* max-width: 100%;  */
 }
  .banner1 .text {
-   padding: 7rem;
+   padding: 7rem 0rem;
+   text-align: center;
+   max-width: 50%;
+   /* border: 1px solid black; */
 }
 .banner1 .text h2 {
     color: var(--bg-color);
@@ -156,7 +157,7 @@ body {
     font-weight: 300;
 }
 .btn {
-    min-width: 12%;
+    /* min-width: 12%; */
     padding: 5px;
     border: none;
     border-radius: 5px;
@@ -338,11 +339,12 @@ aside {
     box-shadow: 0px 0px 20px var(--bg-color1) ;
 }
 .shampoo img {
-    max-height: 28rem;
+    /* max-height: 28rem; */
+    max-width: 50%;
     padding-top: 2rem;
 }
 .shampoo_text {
-    padding-top: 3rem;
+    padding-top: 5rem;
 }
 .sold_available {
     display: flex;
@@ -605,10 +607,8 @@ footer {
     .banner1 {
         margin-top: 2rem;
     }
-    .text {
-        padding-top: 2rem;
-        padding-left: 4rem;
-        
+    .banner1 .text {
+        max-width: 40%;
     }
     .deal_of_day, .new_products, .right_row1, .right_row1 h1 {
         padding-left: 0;
@@ -659,13 +659,13 @@ footer {
 
 .second_header_phone {
     border-bottom: 2px solid var(--bg-color1);
-    padding: 1rem 5rem;
+    padding: 1rem 0rem;
     /* max-width: 1440px; */
     display: none;
 }
 .second_header_phone .air_text {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--bg-color);
 }
 .second_header_phone .search_bar {
@@ -678,7 +678,7 @@ footer {
 .second_header_phone .search_bar input{
     color:rgb(231, 226, 226) ;
     padding: 10px;
-    font-size: .8rem;
+    font-size: .5rem;
     border: none;
     width: 90%;
     outline: none;
@@ -696,7 +696,20 @@ footer {
         background-repeat: no-repeat;
     }
     .banner1 .text {
-        display: none;
+        min-width: 50%;
+    }
+    .banner1 .text h2 {
+        font-size: .9rem;
+    }
+    .banner1 .text h1 {
+        font-size: 1rem;
+    }
+    .banner1 .text h3 {
+        font-size:.9rem ;
+    }
+    .banner1 .btn {
+        padding: 3px;
+        font-size: 10px;
     }
     .right_row1, .shampoo {
         flex-direction: column;
@@ -719,6 +732,7 @@ footer {
     .firstrow
     {
         width: 100%;
+        /* margin: 0 auto; */
     }
     .deal_of_day, .new_products, .right_row1, .right_row1 h1 {
         padding-left: 0;
@@ -729,18 +743,10 @@ footer {
     .testimonial,.services, .banner2 {
         width: 100%;
     }
-    /* .summer_collection {
-        padding: 1rem 3rem;
-    } */
     .banner2 img {
         padding-top: 5rem;
         width: 100%;
-        /* background-size: 100%; */
-        /* padding-left: 1.3rem; */
     } 
-    .main_body {
-        grid-template-columns:1fr;
-    }
     .middle_footer .footer_content {
         grid-template-columns: repeat(1,1fr);
     }
@@ -755,6 +761,12 @@ footer {
     }
     .second_header_phone {
         display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 0px) and (max-width:520px)
+{
+    .newitem_row {
         flex-direction: column;
     }
 }
