@@ -781,4 +781,7 @@ footer {
     .newitem_row {
         flex-direction: column;
     }
+    .banner2 .summer_collection {
+        padding: .3rem 3rem;
+    }
 }
