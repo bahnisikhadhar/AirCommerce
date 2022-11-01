@@ -603,10 +603,10 @@ footer {
     body {
         width: 100%;
     }
-    /* .container {
-        padding: 0 10px;
-        margin: 0 auto;
-    } */
+    .second_header, .first_header {
+        padding-left:.5rem;
+        padding-right: 0.5rem;
+    }
     .banner1 {
         margin-top: 2rem;
     }
@@ -662,13 +662,13 @@ footer {
 
 .second_header_phone {
     border-bottom: 2px solid var(--bg-color1);
-    padding: 1rem 0rem;
+    padding: 1rem .5rem;
     /* max-width: 1440px; */
     display: none;
 }
 .second_header_phone .air_text {
     /* width: 100%; */
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     font-size: 1rem;
     color: var(--bg-color);
 }
@@ -694,9 +694,9 @@ footer {
     body {
         width: 100%;
     }
-    /* .container {
-        padding: 0rem 1rem;
-    } */
+    .first_header {
+        padding: .5rem;
+    }
     .banner1 {
         margin-top: 2rem;
         /* width: 100%; */
