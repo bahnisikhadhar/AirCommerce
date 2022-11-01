@@ -135,18 +135,21 @@ body {
     color: rgb(70, 69, 69);
 }
 /********************************* start of banner1 **********************************/
-.banner1 {
+ .banner1 {
     background: url("/images/banner-1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    /* max-width: 100%;  */
-}
+    /* max-width: 100%;   */
+} 
+
  .banner1 .text {
    padding: 7rem 0rem;
    text-align: center;
    max-width: 50%;
+   /* position: absolute;
+   top: 25%; */
    /* border: 1px solid black; */
 }
 .banner1 .text h2 {
@@ -600,10 +603,10 @@ footer {
     body {
         width: 100%;
     }
-    .container {
+    /* .container {
         padding: 0 10px;
         margin: 0 auto;
-    }
+    } */
     .banner1 {
         margin-top: 2rem;
     }
@@ -664,7 +667,8 @@ footer {
     display: none;
 }
 .second_header_phone .air_text {
-    width: 100%;
+    /* width: 100%; */
+    padding-left: 1rem;
     font-size: 1rem;
     color: var(--bg-color);
 }
@@ -678,6 +682,7 @@ footer {
 .second_header_phone .search_bar input{
     color:rgb(231, 226, 226) ;
     padding: 10px;
+    padding-left: 1rem;
     font-size: .5rem;
     border: none;
     width: 90%;
@@ -689,6 +694,9 @@ footer {
     body {
         width: 100%;
     }
+    /* .container {
+        padding: 0rem 1rem;
+    } */
     .banner1 {
         margin-top: 2rem;
         /* width: 100%; */
@@ -713,6 +721,10 @@ footer {
     }
     .right_row1, .shampoo {
         flex-direction: column;
+    }
+    .shampoo img {
+        max-width: 90%;
+        align-self: center;
     }
     .shampoo_text {
         padding-left: 1rem;
