@@ -13,16 +13,22 @@ body {
     --bg-color: rgb(244, 152, 167);
     --bg-color1: rgb(232, 232, 232)
 }
-/* Start of first header */
+/************************general css*********************************************/
+.container{
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+/******************************** Start of first header*****************************/
 .first_head {
     border-top: 2px solid var(--bg-color1);
     border-bottom: 2px solid var(--bg-color1) ;
-    /* max-width: 100%; */
 }
 .first_header {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     /* margin: auto; */
-    padding: .7rem 5rem;
+    padding: .7rem 0rem;
     color: rgb(156, 154, 154);
     font-size: 12px;
     font-weight: 600;
@@ -58,14 +64,14 @@ body {
     border: none;
 }
 
-/* start of 2nd header */
+/**********************start of 2nd header****************************************************/
 .second_head {
     border-bottom: 2px solid var(--bg-color1);
 }
 .second_header {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     /* margin: auto; */
-    padding: 1rem 5rem;
+    padding: 1rem 0rem;
     color: rgb(156, 154, 154);
 }
 .second_header ul {
@@ -106,14 +112,14 @@ body {
 .second_header .fa-regular {
     color: black;
 }
-/* Start of main body */
-main {
-    max-width: 1440px;
-    /* margin: auto; */
-    padding-left: 5rem;
+/*************************** Start of main body*********************************************/
+/* main {
+    max-width: 1440px; 
+    margin: auto;
+     padding-left: 5rem;
     padding-right: 5rem;
-}
-/* start of navbar */
+} */
+/************************ start of navbar in the main body *********************************/
 .navbar{
     padding: 20px;
 }
@@ -128,23 +134,24 @@ main {
 .navbar a{
     color: rgb(70, 69, 69);
 }
-/* start of banner1 */
+/********************************* start of banner1 **********************************/
 .banner1 {
     background: url("/images/banner-1.jpg");
     background-size: cover;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: 100%;
     /* min-width: 820px; */
     height:25rem ;
     max-width: 100%; 
 }
- .text {
+ .banner1 .text {
    padding: 7rem;
 }
-.text h2 {
+.banner1 .text h2 {
     color: var(--bg-color);
 }
-.text h3 {
+.banner1 .text h3 {
     color: gray;
     font-weight: 300;
 }
@@ -158,7 +165,7 @@ main {
     font-weight: bold;
     margin-top: 10px;
 }
-/* start of 1st row */
+/************************ start of 1st row after the banner ************************************/
 .movable {
     display: flex;
     justify-content: space-between;
@@ -204,14 +211,22 @@ main {
     color: var(--bg-color);
     font-size: 12px;
 }
-.main_body {
+
+/*************************Start of the sticky parts whole body *************************************/
+/* .main_body {
     display: grid;
     grid-template-columns: 1fr 4fr;
+} */
+.main_body {
+    display: flex;
 }
-/* sidebar */
+/*********************stat of the sidebar **********************************************/
 aside {
     position: sticky;
     top: 0;
+    max-width: 45rem;
+    margin-right: 1rem;
+    /* the above line is used when main_body is not grid */
 }
 .left_sidebar {
     /* min-height:50vh; */
@@ -253,14 +268,18 @@ aside {
 .fa-star {
     color: goldenrod;
 }
+
+/* *********************Right side of the leftbar starts ********************************/
+/********************START OF ARRIVAL,TRENDING PART ************************************/
 .right_row1 {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-left:2rem;
+    /* padding-left:2rem; */
     justify-content: space-between;
 }
 .right_row1 h1 {
-    padding-left:2rem;
+    /* padding-left:2rem; */
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--bg-color1);
     margin-bottom: 1rem;
@@ -269,7 +288,7 @@ aside {
     max-width: 30%;
 }
 .arrival_row {
-    /* max-width:100%; */
+    max-width:100%;
     border: 1px solid var(--bg-color1);
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -292,9 +311,12 @@ aside {
     height: 100%;
     width: 30%;
 }
-.deal_of_day, .new_products {
+/* this below line is used if we use display:grid for main_body */
+/* .deal_of_day, .new_products {  
     padding-left:2rem;
-}
+} */
+
+/********************DEAL OF THE DAY part starts ******************************************/
 .deal_of_day .row1,.new_products .row1 {
     padding-top: 2rem;
     padding-bottom: .5rem;
@@ -354,6 +376,8 @@ aside {
     background-color: var(--bg-color1);
     border-radius: 10px;
 }
+
+/****************************NEW PRODUCTS part starts *****************************************/
 .newitem_row {
     display: flex;
     flex-wrap: wrap;
@@ -362,7 +386,7 @@ aside {
 }
 .newitem_row1 {
     border: 1px solid var(--bg-color1);
-    padding: 35px;
+    padding: 30px;
     border-radius: 10px;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -374,9 +398,12 @@ aside {
     max-height: 9rem;
     /* max-height: 25vh; */
 }
+/********************************END OF STICKY PART WHOLE BODY ***************************************/
+
+/***************************The TESTIMONIAL SECTION STARTS *****************************************/
 .second_last_row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     /* gap: 2.5rem; */
     margin-top: 5rem;
@@ -388,7 +415,7 @@ aside {
 .alan_doe, .support {
     margin-top: 2rem;
     border: 1px solid var(--bg-color1);
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 4rem;
     text-align: center;
     border-radius: 10px;
 }
@@ -402,12 +429,6 @@ aside {
 }
 .fa-quote-left {
     color: var(--bg-color);
-}
-.banner_services {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 2rem;
-    flex-wrap: wrap;
 }
 .second_last_row .banner2 img {
     /* background: url("/images/cta-banner.jpg") no-repeat center/cover; */
@@ -425,16 +446,24 @@ aside {
  left: 50%;
  transform: translate(-50%,-50%);
  padding: 2rem 4rem;
+ /* min-height: 50%;
+ min-width: 40%; */
  border-radius: 10px;
  background: rgba(255, 255, 255,.5);
  box-shadow: 0 5px 15px rgba(0,0,0, .5);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 .summer_collection h5 {
+    /* width: 60%; */
     background-color: rgb(43, 42, 42);
     color: white;
     padding: 5px;
     text-align: center;
     border-radius: 5px;
+    /* margin-top: 1rem; */
 }
 .summer_collection h2, .summer_collection p {
     text-align: center;
@@ -452,6 +481,8 @@ aside {
 .support .fa-solid,.support .bi {
     color: var(--bg-color);
 }
+
+/**************LAST ROW BEFORE FOOTER starts *************************************/
 .last_row {
     display: flex;
     flex-wrap: wrap;
@@ -481,18 +512,20 @@ aside {
     color: gray;
     font-weight: 200;
 }
+
+/*********************************FOOTER Section starts ***********************************************/
 footer {
     background-color:rgb(35, 34, 34);
 }
 .upper_footer, .middle_footer {
     border-bottom: 1px solid rgb(166, 148, 148);
 }
-.footer_content {
+/* .footer_content {
     max-width: 1440px;
-    /* margin: auto; */
+    margin: auto;
     padding-left: 5rem;
     padding-right: 5rem;
-}
+} */
 .upper_footer_text {
     padding:3rem 0rem 2rem 0rem;
 }
@@ -533,15 +566,21 @@ footer {
     padding-bottom: .5rem;
 }
 .lower_footer {
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem 0rem;
     border-bottom:1px solid rgb(166, 148, 148) ;
 }
 .lower_footer p {
     color: rgb(206, 203, 203);
     padding-top: .5rem;
 }
-/* for tab */
+/******************************END OF THE CSS FOR P.C VIEW *************************************************/
+
+/******************** FOR TAB *********************************/
 .second_icon1 {
     background-color: white;
     box-shadow: 0px 0px 10px gray;
@@ -553,11 +592,15 @@ footer {
     padding: 1.5rem;
 }
 
-/* media query for tab */
+/************************ MEDIA QUERY for TAB *******************************************/
 
-@media (min-width: 870px) and (max-width:1280px){
+@media (min-width: 800px) and (max-width:1280px){
     body {
         width: 100%;
+    }
+    .container {
+        padding: 0 10px;
+        margin: 0 auto;
     }
     .banner1 {
         margin-top: 2rem;
@@ -589,9 +632,9 @@ footer {
         width: 30%;
         border-radius: 50%;
     }
-    .main_body {
+    /* .main_body {
         grid-template-columns:1fr;
-    }
+    } */
     .sidebar_hide,.first_header .icons, .second_header .second_icon, .navbar, .first_row_hide_tab {
         display: none;
     }
@@ -612,7 +655,7 @@ footer {
     }
 }
 
-/* for phone */
+/************************** FOR PHONE ********************************************/
 
 .second_header_phone {
     border-bottom: 2px solid var(--bg-color1);
@@ -641,13 +684,14 @@ footer {
     outline: none;
 }
 
-/* media query for phone */
-@media (min-width: 0px) and (max-width:870px){
+/***************************** MEDIA QUERY for PHONE **********************************************/
+@media (min-width: 0px) and (max-width:800px){
     body {
         width: 100%;
     }
     .banner1 {
         margin-top: 2rem;
+        /* width: 100%; */
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -657,8 +701,11 @@ footer {
     .right_row1, .shampoo {
         flex-direction: column;
     }
-    .right_row1 .arrival_row {
-        width:35rem
+    .shampoo_text {
+        padding-left: 1rem;
+    }
+    .arrival, .trending, .rated {
+        max-width:100%
     }
     .first_header .rigt_icon_hide_phone, .second_header .hide_phone{
         display: none;
@@ -669,7 +716,7 @@ footer {
     .movable .hide_phone, .last_row .hide_phone {
         display: none;
     }
-    .movable .tab
+    .firstrow
     {
         width: 100%;
     }
@@ -682,9 +729,13 @@ footer {
     .testimonial,.services, .banner2 {
         width: 100%;
     }
+    /* .summer_collection {
+        padding: 1rem 3rem;
+    } */
     .banner2 img {
         padding-top: 5rem;
         width: 100%;
+        /* background-size: 100%; */
         /* padding-left: 1.3rem; */
     } 
     .main_body {
@@ -698,7 +749,6 @@ footer {
         width: 100%;
         position: fixed;
         bottom: 0;
-        /* left: 25%; */
     }
     .second_head {
         display: none;
