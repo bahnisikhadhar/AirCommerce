@@ -290,6 +290,7 @@ aside {
 }
 .arrival, .trending, .rated {
     max-width: 30%;
+    overflow: hidden;
 }
 .arrival_row {
     max-width:100%;
@@ -300,6 +301,9 @@ aside {
     /* flex-wrap: wrap; */
     gap: 1rem;
     padding: .5rem 0;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
 }
 .arrival_row:hover {
     box-shadow: 0px 0px 20px var(--bg-color1) ;
